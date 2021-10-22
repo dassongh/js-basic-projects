@@ -132,7 +132,7 @@ function displayMenuBtns(menuItems) {
     btn.addEventListener('click', (e) => {
       const category = e.currentTarget.dataset.id;
       const menuCategory = menuItems.filter((el) => {
-        if (el.category === category) return el; 
+        return el.category === category;
       });
   
       if (category === 'all') return displayMenuItems(menuItems);
